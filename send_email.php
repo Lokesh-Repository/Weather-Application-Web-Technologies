@@ -1,3 +1,9 @@
+<!-- ewwwwww.....
+What's That Brother....
+what's That......
+Need Clarifications ? visit http://lokeshportfolio.rf.gd/
+
+Hi There Mr/Mrs.Hacker Good Luck On Understanding The Code Cause,I Coded This Shit And SomeTimes I Myself Get Confused.. -->
 <?php
 require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
