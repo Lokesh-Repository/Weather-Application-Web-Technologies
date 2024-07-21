@@ -98,7 +98,6 @@
                                 redirect: 'follow'
                             };
                         
-                            // Fetch and populate countries
                             fetch("https://api.countrystatecity.in/v1/countries", requestOptions)
                                 .then(response => response.json())
                                 .then(countries => {
@@ -157,7 +156,6 @@
                                     });
                             });
                         
-                            // Fetch weather data when a city is selected
                             citySelect.addEventListener('change', () => {
                                 const country = countrySelect.value;
                                 const state = stateSelect.value;
@@ -485,23 +483,23 @@ function updateAirQuality(data) {
                             to hear from you
                         </p>
 
-                        <form class="mt-6">
+                        <form class="mt-6" action="send_email.php" method="POST">
                             <div class="flex-1">
                                 <label class="block mb-2 text-sm text-gray-600">Full Name</label>
-                                <input type="text" placeholder="Your Name" class="block w-full py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                                <input type="text" placeholder="Your Name" name="name" class="block w-full py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                             </div>
 
                             <div class="flex-1 mt-6">
                                 <label class="block mb-2 text-sm text-gray-600">Email address</label>
-                                <input type="email" placeholder="Your Email Please." class="block w-full py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                                <input type="email" placeholder="Your Email Please." name="email" class="block w-full py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                             </div>
 
                             <div class="w-full mt-6">
                                 <label class="block mb-2 text-sm text-gray-600">Message</label>
-                                <textarea class="block w-full h-32 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" placeholder="Message"></textarea>
+                                <textarea name="message" class="block w-full h-32 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" placeholder="Message"></textarea>
                             </div>
 
-                            <button class="px-8 my-4 w-full py-2 text-lg text-white transform bg-blue-500 rounded-md flex items-center justify-between">
+                            <button type="submit" class="px-8 my-4 w-full py-2 text-lg text-white transform bg-blue-500 rounded-md flex items-center justify-between">
                                 <span>Get In Touch</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-arrow-right w-8 h-6" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
