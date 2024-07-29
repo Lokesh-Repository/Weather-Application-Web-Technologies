@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress($email, $name);  
         $mail->isHTML(true);
         $mail->Subject = 'Thank you for getting in touch!';
-        $mail->Body = "<p>Dear $name,</p><p>Thank you for getting in touch. We have received your message and will get back to you shortly.</p><p>Message: $message</p>";
+        $mail->Body = "<p>Dear $name,</p><p>Thank you for getting in touch. We have received your message and will get back to you shortly.</p><p>Message: $message</p><p>Mail Sent By EduTrue On Behalf Of Weather Application.</p>";
         $mail->send();
 
         $mail->clearAddresses();
